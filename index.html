@@ -469,14 +469,11 @@ function syncIndividualCharts(){
 <!-- --- PWA: registrar service worker y cargar el script que inyecta botones de guardar/instalar --- -->
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then(()=> console.log('Service worker registrado'))
-      .catch(e => console.warn('Error registrando SW', e));
+    navigator.serviceWorker.register('sw.js').then(()=>console.log('SW registrado')).catch(e=>console.warn(e));
   }
 </script>
-
-<!-- pwa_save.js debe estar en la misma carpeta; este script inyecta los botones Guardar/Exportar/Instalar -->
 <script src="pwa_save.js"></script>
+
 
 </body>
 </html>
