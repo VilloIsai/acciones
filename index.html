@@ -339,8 +339,8 @@ function finalizeOperation(action, op, loser){
       else if (op === '+60') last = last + 60;
       else if (op === 'x2') last = roundIfEndsIn5(last * 2);
     } else if (key === loser){
-      if (op === '+40') last = last - 30;
-      else if (op === '+60') last = last - 50;
+      if (op === '+40') last = last - 50;
+      else if (op === '+60') last = last - 30;
       else if (op === 'x2') last = roundIfEndsIn5(last / 2);
     }
     pushValue(key, last);
